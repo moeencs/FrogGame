@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Frog Jump</title>
+    <title>Unity WebGL Player | Feed The Frog</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Frog Jump</div>
+        <div id="unity-build-title">Feed The Frog</div>
       </div>
     </div>
     <script>
@@ -56,14 +56,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/BuildV10.loader.js";
+      var loaderUrl = buildUrl + "/BuildV11.loader.js";
       var config = {
-        dataUrl: buildUrl + "/BuildV10.data.unityweb",
-        frameworkUrl: buildUrl + "/BuildV10.framework.js.unityweb",
-        codeUrl: buildUrl + "/BuildV10.wasm.unityweb",
+        dataUrl: buildUrl + "/BuildV11.data.unityweb",
+        frameworkUrl: buildUrl + "/BuildV11.framework.js.unityweb",
+        codeUrl: buildUrl + "/BuildV11.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Knee Bouncers",
-        productName: "Frog Jump",
+        productName: "Feed The Frog",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
@@ -97,7 +97,7 @@
         canvas.style.height = "600px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/BuildV10.jpg') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/BuildV11.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
