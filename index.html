@@ -6,8 +6,8 @@
     <title>Unity WebGL Player | Feed The Frog</title>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=1280 height=720 style="width: 1280px; height: 720px; background: url('Build/FrogGameBuild.jpg') center / cover"></canvas>
-    <script src="Build/FrogGameBuild.loader.js"></script>
+    <canvas id="unity-canvas" width=1280 height=720 style="width: 1280px; height: 720px; background: url('Build/GameBuild.jpg') center / cover"></canvas>
+    <script src="Build/GameBuild.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
@@ -25,9 +25,9 @@
       }
 
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/FrogGameBuild.data.unityweb",
-        frameworkUrl: "Build/FrogGameBuild.framework.js.unityweb",
-        codeUrl: "Build/FrogGameBuild.wasm.unityweb",
+        dataUrl: "Build/GameBuild.data.unityweb",
+        frameworkUrl: "Build/GameBuild.framework.js.unityweb",
+        codeUrl: "Build/GameBuild.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Knee Bouncers",
         productName: "Feed The Frog",
