@@ -100,8 +100,14 @@
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
+        script.src = loaderUrl;
+
+        script.onload = () => {
+            document.getElementById("unity-action-button").onclick = () => {
+                // FIXME: set the object name, method name and value to call Unity method
+                // see https://docs.unity3d.com/Manual/web-interacting-browser-unity-to-js.html
+                window.unityInstance.SendMessage("LoadModelFromURL", "GetDataFromButtonClick", 5);
+            }; => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
