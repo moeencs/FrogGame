@@ -19,6 +19,7 @@
       <div id="unity-warning"> </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
+        <button id="unity-action-button">Click me!</button>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">3D_Viewer</div>
       </div>
@@ -107,10 +108,11 @@
                 // FIXME: set the object name, method name and value to call Unity method
                 // see https://docs.unity3d.com/Manual/web-interacting-browser-unity-to-js.html
                 window.unityInstance.SendMessage("LoadModelFromURL", "GetDataFromButtonClick", 5);
-            }; => {
+            };
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
+          window.unityInstance = unityInstance;
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
